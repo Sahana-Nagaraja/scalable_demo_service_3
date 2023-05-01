@@ -1,17 +1,29 @@
 package com.bits.wilp.demo_service_3.notifier;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-
-@Document
 public class Notification {
 
-    @Id
-    public Integer id;
+    public String id;
 
     public String message;
 
-    public Notification(String message) {
+    public Notification(String id, String message) {
+        this.id = id;
+        this.message = message;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
         this.message = message;
     }
 
